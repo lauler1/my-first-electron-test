@@ -2,8 +2,9 @@
 
 This is a test project for electron
 
+---
 
-# Instructions
+## Instructions
 
 I folowed this [tutorial](https://www.tutorialspoint.com/electron/electron_installation.htm)
 
@@ -42,6 +43,46 @@ Let us now install jquery using the npm command:
 $ npm install --save jquery
 ```
 
+### Packaging Apps
+
+```bash
+# for use in npm scripts
+$ npm install electron-packager --save-dev
+```
+
+```bash
+# for use from cli
+$ npm install electron-packager -g
+```
+
+In this section, we will see how to run the packager from the command line. The basic form of the command is:
+
+```bash
+electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
+```
+
+This will:
+
+Find or download the correct release of Electron.
+
+Use that version of Electron to create a app in `<output-folder>/<appname>-<platform>-<arch>`.
+
+`--platform` and `--arch` can be omitted, in two cases. If you specify `--all` instead, bundles for all valid combinations of target platforms/architectures will be created. Otherwise, a single bundle for the host platform/architecture will be created.
+
+E.g.:
+```bash
+$ electron-packager . my-first-electron-test
+
+$ electron-packager . my-first-electron-test --platform=linux arch=x64
+
+$ electron-packager . my-first-electron-test --platform=win32
+
+$ electron-packager . my-first-electron-test --platform=win32 --arch=ia32
+
+$ electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds
+```
+
+---
 
 
 ## Problems
@@ -61,7 +102,7 @@ Solution:
 sudo apt-get install libgconf-2-4
 ```
 
-### JQuery `require`problem
+### JQuery `require` problem
 
 From this [forum](https://stackoverflow.com/questions/44391448/electron-require-is-not-defined), as of version 5, the default for `nodeIntegration` changed from true to false. You can enable it when creating the Browser Window:
 
@@ -75,3 +116,12 @@ From this [forum](https://stackoverflow.com/questions/44391448/electron-require-
   }})
 ```
 
+### fs.appendFile without callback
+
+In the tutorial, fs.appendFile had no callback which generated an error. Callback is mandatory.
+```js
+   fs.appendFile('contacts', name + ',' + email + '\n', (err) => {
+    if (err) {
+      console.log(err);
+    }})
+```
