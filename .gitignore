@@ -173,5 +173,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# My Files and Folders
 contacts
+bower_components/
 my-first-electron-test-*/
