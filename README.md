@@ -134,6 +134,8 @@ Bob -> Alice: Hi!
 		
 @enduml
 ```
+![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/lauler1/my-first-electron-test/blob/main/diag.iuml)
+
 
 <div hidden>
 
