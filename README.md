@@ -134,3 +134,16 @@ Bob -> Alice: Hi!
 		
 @enduml
 ```
+
+<div hidden>
+
+```
+@startuml firstDiagram
+Alice -> Bob: Hello
+Bob -> Alice: Hi 2 !
+@enduml
+```
+
+</div>
+
+![](firstDiagram.svg)
