@@ -116,7 +116,7 @@ From this [forum](https://stackoverflow.com/questions/44391448/electron-require-
   }})
 ```
 
-### fs.appendFile without callback
+### `fs.appendFile` without callback
 
 In the tutorial, fs.appendFile had no callback which generated an error. Callback is mandatory.
 ```js
@@ -126,26 +126,3 @@ In the tutorial, fs.appendFile had no callback which generated an error. Callbac
     }})
 ```
 
-```plantuml
-@startuml firstDiagram
-
-Alice -> Bob: Hello
-Bob -> Alice: Hi!
-		
-@enduml
-```
-![your-UML-diagram-name]( https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/lauler1/my-first-electron-test/main/README.md)
-
-
-<div hidden>
-
-```
-@startuml firstDiagram
-Alice -> Bob: Hello
-Bob -> Alice: Hi 2 !
-@enduml
-```
-
-</div>
-
-![](firstDiagram.svg)
