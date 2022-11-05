@@ -125,3 +125,12 @@ In the tutorial, fs.appendFile had no callback which generated an error. Callbac
       console.log(err);
     }})
 ```
+
+```plantuml
+@startuml firstDiagram
+
+Alice -> Bob: Hello
+Bob -> Alice: Hi!
+		
+@enduml
+```
