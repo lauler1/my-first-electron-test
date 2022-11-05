@@ -24,7 +24,29 @@ To run it, use:
 $ electron ./main.js
 ```
 
+You can use Bower to manage these front-end dependencies. Install bower using:
+
+```bash
+$ npm install -g bower
+```
+
+To get the latest stable version of bootstrap, enter the following command:
+
+```bash
+$ bower install bootstrap
+```
+
+Let us now install jquery using the npm command:
+
+```bash
+$ npm install --save jquery
+```
+
+
+
 ## Problems
+
+### Electron installation problem
 
 After installing electron, I got the following error:
 
@@ -38,3 +60,18 @@ Solution:
 ```bash
 sudo apt-get install libgconf-2-4
 ```
+
+### JQuery `require`problem
+
+From this [forum](https://stackoverflow.com/questions/44391448/electron-require-is-not-defined), as of version 5, the default for `nodeIntegration` changed from true to false. You can enable it when creating the Browser Window:
+
+```js
+   win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+  }})
+```
+
