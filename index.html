@@ -12,15 +12,7 @@
          <h1>This page is using Bootstrap and jQuery!</h1>
          <h3 id = "click-counter">1</h3>
          <button class = "btn btn-success" id = "countbtn">Click here</button>
-         <script>
-            window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
-            let count = 0
-            $('#click-counter').text(count.toString())
-            $('#countbtn').on('click', () => {
-               count ++ 
-               $('#click-counter').text(count)
-            }) 
-         </script>
+         <script src = "./view.js" ></script>
       </div>
    </body>
 </html>
